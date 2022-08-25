@@ -1,0 +1,15 @@
+package com.appvenda.models;
+
+public class Client {
+	private long id;
+	private String name;
+	private String Address;
+	private String district;
+	private String CEP;
+	private String email;
+	private String telefone;
+	
+	public Integer idade;
+	
+
+}

@@ -1,0 +1,44 @@
+package com.appvenda.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import com.appvenda.models.Client;
+
+public class ClientDAO {
+	private EntityManager entityManager;
+	
+	public ClientDAO(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+	
+	public Client salvarCliente() {
+		return null;
+	}
+	
+	public Client alterarCliente() {
+		return null;
+	}
+	
+	public Client excluitCliente() {
+		return null;
+	}
+	
+	public Client consultaClienteId() {
+		return null;
+	}
+	
+	public List<Client> listaCliente() {
+		return null;
+	}
+	
+	public List<Client> listaClienteNome() {
+		return null;
+	}
+
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+
+}

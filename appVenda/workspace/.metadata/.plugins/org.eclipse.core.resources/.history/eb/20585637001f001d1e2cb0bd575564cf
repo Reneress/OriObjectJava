@@ -1,0 +1,68 @@
+package com.appvenda.services;
+
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceContext;
+import com.appvenda.dao.ClientDAO;
+import com.appvenda.models.Client;
+import com.appvenda.persistence.DataBaseConnection;
+
+public class ClientService {
+	
+	@PersistenceContext(unitName = "appvenda")
+	private final EntityManager entityManager;
+	
+	private ClientDAO  dao;
+	]private EntityTransaction tx;
+
+	public ClientService() {
+		entityManager = DataBaseConnection.getConnection().getEntityManager();
+		dao = new ClientDAO(entityManager);
+	}
+
+	public Client salvarCliente(Client cliente) {
+		tx = getEntityManager().getTransaction();
+		
+		try {
+			getTx().begin();
+			getTx().salvarCliente(cliente);
+			getTx().commit();
+		}
+	}
+	
+	public Client alterarCliente() {
+		return null;
+	}
+	
+	public Client excluitCliente() {
+		return null;
+	}
+	
+	public Client consultaClienteId() {
+		return null;
+	}
+	
+	public List<Client> listaCliente() {
+		return null;
+	}
+	
+	public List<Client> listaClienteNome() {
+		return null;
+	}
+
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+
+	public ClientDAO getDao() {
+		return dao;
+	}
+
+	public EntityTransaction getTx() {
+		return tx;
+	}
+	
+	
+}
+

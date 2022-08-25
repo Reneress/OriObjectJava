@@ -1,0 +1,5 @@
+package com.appvenda.dao;
+
+public class ClientDAO {
+
+}
