@@ -95,7 +95,8 @@ public class ClientService {
 	}
 	
 	public List<Client> listaCliente() {
-		return null;
+		return dao.listaCliente();
+		//return null;
 	}
 	
 	public List<Client> listaClienteNome() {

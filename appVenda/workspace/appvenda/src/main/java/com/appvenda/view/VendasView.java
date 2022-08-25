@@ -2,6 +2,8 @@ package com.appvenda.view;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -44,7 +46,11 @@ public class VendasView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		excluirClient();
+		//salvarClient();
+		//alterarClient();
+		//excluirClient():
+		//consultaClient();
+		listarClient();
 	}
 	
 	public void salvarClient() {
@@ -99,6 +105,28 @@ public class VendasView extends JFrame {
 		
 		clienteService.excluirCliente(cliente.getId());
 		
+	}
+	
+	public void consultaClient() {
+		ClientService clienteService = new ClientService();
+		Client cliente = new Client();
+		
+		Long id = 2L;
+		
+		cliente = clienteService.consultaClienteId(id);
+		
+		System.out.println(cliente.toString());
+	}
+	
+	public void listarClient() {
+		ClientService clienteService = new ClientService();
+				
+		List<Client> clientes = new ArrayList<>();
+		clientes = clienteService.listaCliente();
+		
+		for(Client cliente: clientes) {
+			System.out.println(cliente.toString());
+		}
 	}
 
 }
