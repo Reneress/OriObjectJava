@@ -1,0 +1,43 @@
+package com.appvenda.view.table;
+
+import javax.swing.table.AbstractTableModel;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class JTableModel<T> extends AbstractTableModel{
+	
+	private static final long serialVersionUID = 1114546107635782801L;
+	
+	protected List<T> tabela;
+	protected String coluna[];
+	
+	public JTableModel() {
+		tabela = new ArrayList<>();
+	}
+
+	
+	public JTableModel(List<T> tabela) {
+		this.tabela = tabela;
+	}
+
+	@Override
+	public int getRowCount() {
+		
+		return 0;
+	}
+
+	@Override
+	public int getColumnCount() {
+		
+		return 0;
+	}
+
+	@Override
+	public Object getValueAt(int rowIndex, int columnIndex) {
+		
+		return null;
+	}
+
+}
