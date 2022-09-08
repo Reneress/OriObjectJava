@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 //import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
+import com.appvenda.config.Page;
 import com.appvenda.models.Client;
 
 public class ClientDAO {
@@ -61,6 +62,35 @@ public class ClientDAO {
 
 	public EntityManager getEntityManager() {
 		return entityManager;
+	}
+
+	public Page<Client> listaPaginada(int paginaAtual, int tamanhoPagina) {
+		
+		Page<Client> page = new Page<Client>();
+		
+		List<Client> listaCliente = new ArrayList<>();
+		
+		Integer total =count().intValue();
+		
+		TypedQuery<Client> query = getEntityManager().createQuery("SELECT c from Client c",Client.class);
+		
+		listaCliente = query.setFirstResult(paginaAtual).setMaxResults(tamanhoPagina).getResultList();
+		
+		page.setContent(listaCliente);
+		page.setPage(paginaAtual);
+		page.setPageSize(tamanhoPagina);
+		page.setTotalRecords(total);
+		page.setTotalPage(total/tamanhoPagina);
+		
+				
+		return page;
+	}
+	
+	public Long count() {
+		TypedQuery<Long> query = getEntityManager().createQuery("SELECT COUNT(c) from Client c",Long.class);
+		
+		long total = query.getSingleResult();
+		return total;
 	}
 
 }

@@ -1,9 +1,0 @@
-package com.appvenda.view.table;
-
-import com.appvenda.models.Client;
-
-public class TabelaClienteModel extends JTableModel<Client>{
-
-	private static final long serialVersionUID = -5288345439338876506L;
-
-}

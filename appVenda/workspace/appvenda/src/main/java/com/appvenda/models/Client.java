@@ -53,7 +53,7 @@ public class Client implements Serializable{
 	public void setId(long id) {
 		this.id = id;
 	}
-@Column(name = "nome", length = 100, nullable = false)
+@Column(name = "nome", length = 100)
 	public String getName() {
 		return name;
 	}
@@ -61,7 +61,7 @@ public class Client implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-@Column(name = "endereço", nullable = false,length = 50)
+@Column(name = "endereco",length = 50)
 	public String getAddress() {
 		return Address;
 	}
@@ -69,7 +69,7 @@ public class Client implements Serializable{
 	public void setAddress(String address) {
 		Address = address;
 	}
-@Column(name = "bairro", nullable = false, length = 50)
+@Column(name = "bairro", length = 50)
 	public String getDistrict() {
 		return district;
 	}
@@ -77,14 +77,14 @@ public class Client implements Serializable{
 	public void setDistrict(String district) {
 		this.district = district;
 	}
-@Column(name = "cep", nullable = false, length = 11)
+@Column(name = "cep", length = 11)
 	public String getCep() {
 		return cep;
 	}
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-@Column(name = "email", nullable = false, length = 100)
+@Column(name = "email", length = 100)
 	public String getEmail() {
 		return email;
 	}
@@ -92,7 +92,7 @@ public class Client implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-@Column(name = "telefone", nullable = false,length = 15)
+@Column(name = "telefone", length = 15)
 	public String getTelefone() {
 		return telefone;
 	}
@@ -100,7 +100,7 @@ public class Client implements Serializable{
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-@Column(name = "idade", nullable = false, length = 3)
+@Column(name = "idade",  length = 3)
 	public Integer getIdade() {
 		return idade;
 	}

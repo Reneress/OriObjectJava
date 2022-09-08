@@ -1,0 +1,182 @@
+package com.appvenda.view.cliente;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+public class TabelaCliente extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1110447724870705226L;
+	private JPanel contentPane;
+	private JTextField textNomePesquisa;
+	private JTable table;
+
+	
+	private TabelaCliente model;
+	
+	private int linha = 0;
+	private int coluna =0;
+	private int tamanhoPagina =10;
+	private int paginaAtual =0;
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					TabelaCliente frame = new TabelaCliente();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public TabelaCliente() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 801, 603);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(214, 223, 32));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panelTabela = new JPanel();
+		panelTabela.setBackground(new Color(81, 184, 31));
+		panelTabela.setBounds(10, 144, 767, 295);
+		contentPane.add(panelTabela);
+		panelTabela.setLayout(null);
+		
+		JScrollPane scrollPaneCliente = new JScrollPane();
+		scrollPaneCliente.setBounds(10, 10, 747, 275);
+		panelTabela.add(scrollPaneCliente);
+		
+		table = new JTable();
+		scrollPaneCliente.setViewportView(table);
+		
+		JPanel panelPesquisa = new JPanel();
+		panelPesquisa.setBackground(new Color(255, 255, 255));
+		panelPesquisa.setBounds(10, 10, 767, 128);
+		contentPane.add(panelPesquisa);
+		panelPesquisa.setLayout(null);
+		
+		JLabel labelPesquisa = new JLabel("Nome:");
+		labelPesquisa.setFont(new Font("Verdana", Font.ITALIC, 20));
+		labelPesquisa.setBounds(10, 32, 73, 26);
+		panelPesquisa.add(labelPesquisa);
+		
+		textNomePesquisa = new JTextField();
+		textNomePesquisa.setFont(new Font("Verdana", Font.ITALIC, 20));
+		textNomePesquisa.setBounds(93, 33, 498, 26);
+		panelPesquisa.add(textNomePesquisa);
+		textNomePesquisa.setColumns(10);
+		
+		JButton btnPesquisa = new JButton("Pesquisar");
+		btnPesquisa.setBackground(new Color(81, 184, 31));
+		btnPesquisa.setFont(new Font("Verdana", Font.ITALIC, 20));
+		btnPesquisa.setBounds(601, 32, 156, 26);
+		panelPesquisa.add(btnPesquisa);
+		
+		JButton btnIncluir = new JButton("Incluir");
+		btnIncluir.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+		btnIncluir.setBounds(32, 487, 115, 35);
+		contentPane.add(btnIncluir);
+		
+		JButton btnAlterar = new JButton("Alterar");
+		btnAlterar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+		btnAlterar.setBounds(179, 487, 115, 35);
+		contentPane.add(btnAlterar);
+		
+		JButton btnExcluir = new JButton("Excluir");
+		btnExcluir.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+		btnExcluir.setBounds(319, 487, 115, 35);
+		contentPane.add(btnExcluir);
+		
+		JButton btnConsultar = new JButton("Consultar");
+		btnConsultar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+		btnConsultar.setBounds(466, 487, 157, 35);
+		contentPane.add(btnConsultar);
+	}
+
+	public JPanel getContentPane() {
+		return contentPane;
+	}
+
+	public void setContentPane(JPanel contentPane) {
+		this.contentPane = contentPane;
+	}
+
+	public JTextField getTextNomePesquisa() {
+		return textNomePesquisa;
+	}
+
+	public void setTextNomePesquisa(JTextField textNomePesquisa) {
+		this.textNomePesquisa = textNomePesquisa;
+	}
+
+	public JTable getTable() {
+		return table;
+	}
+
+	public void setTable(JTable table) {
+		this.table = table;
+	}
+
+	public TabelaCliente getModel() {
+		return model;
+	}
+
+	public void setModel(TabelaCliente model) {
+		this.model = model;
+	}
+
+	public int getLinha() {
+		return linha;
+	}
+
+	public void setLinha(int linha) {
+		this.linha = linha;
+	}
+
+	public int getColuna() {
+		return coluna;
+	}
+
+	public void setColuna(int coluna) {
+		this.coluna = coluna;
+	}
+
+	public int getTamanhoPagina() {
+		return tamanhoPagina;
+	}
+
+	public void setTamanhoPagina(int tamanhoPagina) {
+		this.tamanhoPagina = tamanhoPagina;
+	}
+
+	public int getPaginaAtual() {
+		return paginaAtual;
+	}
+
+	public void setPaginaAtual(int paginaAtual) {
+		this.paginaAtual = paginaAtual;
+	}
+	
+	
+}

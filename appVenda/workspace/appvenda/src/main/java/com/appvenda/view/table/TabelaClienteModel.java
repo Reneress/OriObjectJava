@@ -17,11 +17,13 @@ public class TabelaClienteModel extends JTableModel<Client>{
 	
 	public TabelaClienteModel() {
 		tabela= new ArrayList<Client>();
+		setColuna(coluna);
 	}
 	
 	public TabelaClienteModel(List<Client> tabela) {
 		super(tabela);
 		this.tabela = tabela;
+		setColuna(coluna);
 	}
 	
 	@Override
@@ -52,7 +54,57 @@ public class TabelaClienteModel extends JTableModel<Client>{
 		}
 		
 	}
+	
+	@Override
+	public Class<?> getColumnClass(int coluna) {
+		// TODO Auto-generated method stub
+		switch (coluna) {
+		case 0: 
+			return Long.class;
+		case 1:
+			return String.class;
+		case 2:
+			return String.class;
+		case 3:
+			return String.class;
+		case 4:
+			return String.class;
+		case 5:
+			return String.class;
+		case 6:
+			return String.class;
+		case 7:
+			return Integer.class;
+		default:
+			return null;
+		}
+	}
+	
+	public Client getCliente (int index) {
+		return getTabela().get(index);
+	}
+	
+	public void salvarCliente(Client cliente) {
+		getTabela().add(cliente);
+		fireTableRowsInserted(getRowCount()-1, getColumnCount()-1);
+	}
+	
+	public void alterarCliente(Client cliente, int index) {
+		getTabela().set(index, cliente);
+		fireTableRowsUpdated(index, index);
+	}
+	
+	public void excluirCliente(int index) {
+		getTabela().remove(index);
+		fireTableRowsDeleted(index, index);
+	}
 
+	public void excluirTudo() {
+		getTabela().clear();
+		fireTableDataChanged();
+	}	
+	
+	
 	public List<Client> getTabela() {
 		return tabela;
 	}

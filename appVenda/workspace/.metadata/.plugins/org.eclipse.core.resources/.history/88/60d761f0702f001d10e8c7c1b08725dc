@@ -1,0 +1,7 @@
+package com.appvenda.view.table;
+
+import javax.swing.table.DefaultTableCellRenderer;
+
+public class RenderTable extends DefaultTableCellRenderer {
+
+}
