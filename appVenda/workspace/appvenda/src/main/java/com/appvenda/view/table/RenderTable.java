@@ -31,6 +31,8 @@ public class RenderTable extends DefaultTableCellRenderer {
 		setBorder(null);
 		setBorder(BorderFactory.createMatteBorder(0, 1, 1, 1, new Color(58,159,161)));
 		setFont(new Font("Verdana",Font.ITALIC,20));
+		setForeground(Color.black);
+		
 		
 		if(isSelected) {
 			JavaComponent.setForeground(table.getSelectionForeground());
@@ -40,7 +42,7 @@ public class RenderTable extends DefaultTableCellRenderer {
 			JavaComponent.setForeground(row % 2 == 0 ? new Color(240,240,255): table.getBackground());
 		}
 		
-		if(value instanceof Number) {
+		if(value instanceof Double) {
 			Number numero = (Number) value;
 			String texto = numberFormat.format(numberFormat);
 			setText(texto);

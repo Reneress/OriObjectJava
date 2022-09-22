@@ -1,0 +1,25 @@
+package dao;
+
+import javax.persistence.EntityManager;
+
+import models.PagamentoComCartao;
+
+public class PagamentoComCartaoDAO {
+private EntityManager em;
+	
+	public PagamentoComCartaoDAO (EntityManager em) {
+		this.em = em;
+	}
+	
+	public EntityManager getEm() {
+		return em;
+	}
+	
+	public void addPagamentoCartao(PagamentoComCartao pagamento) {
+		getEm().persist(pagamento);
+	}
+	
+	public PagamentoComCartao updatePagamentoCartao (PagamentoComCartao pagamento) {
+		return getEm().merge(pagamento);
+	}
+}

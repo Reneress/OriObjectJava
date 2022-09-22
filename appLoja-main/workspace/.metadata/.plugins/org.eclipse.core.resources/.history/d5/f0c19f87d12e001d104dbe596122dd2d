@@ -1,0 +1,9 @@
+package dao;
+
+public class PagamentoDAO {
+	private EntityManager em;
+	
+	public PagamentoDAO (EntityManager em) {
+		this.em = em;
+	}
+}

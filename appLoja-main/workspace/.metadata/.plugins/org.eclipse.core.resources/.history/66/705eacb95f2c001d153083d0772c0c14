@@ -1,0 +1,35 @@
+package dao;
+
+import javax.persistence.EntityManager;
+
+import models.Categoria;
+
+public class CategoriaDAO {
+	private EntityManager em;
+	
+	public CategoriaDAO (EntityManager em) {
+		this.em = em;
+	}
+	
+	public void addCategoria(Categoria categoria) {
+		getEm().persist(categoria);
+	}
+	
+	public Categoria updateCategoria(Categoria categoria) {
+		return getEm().merge(categoria);
+	}
+	
+	public Categoria searchCategoriaById(Long id) {
+		Categoria categoriaBuscada = new Categoria();
+		categoriaBuscada = getEm().find(Categoria.class, id);
+		return categoriaBuscada;
+	}
+	
+	public void removeCategoriaById(Long id) {
+		Categoria categoria = 
+	}
+
+	public EntityManager getEm() {
+		return em;
+	}
+}

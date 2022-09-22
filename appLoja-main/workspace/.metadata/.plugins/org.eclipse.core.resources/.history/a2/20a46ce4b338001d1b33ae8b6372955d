@@ -1,0 +1,43 @@
+package services;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceContext;
+
+import dao.PagamentoComBoletoDAO;
+import dao.PagamentoDAO;
+import models.Pagamento;
+import persistence.DataBaseConnection;
+
+public class PagamentoService {
+	//Attributes
+	@PersistenceContext(unitName = "apploja")
+	private final EntityManager em;
+	
+	private PagamentoDAO dao;
+	
+	private EntityTransaction tx;
+	
+	//Constructors
+	public PagamentoService() {
+		em = DataBaseConnection.getConnection().getEntityManager();
+		dao = new PagamentoDAO(em);
+	}
+	
+	//Methods
+	public void addPagamento(Pagamento pagamento) {
+		tx = getEm().
+	}
+	
+	private PagamentoDAO getDao() {
+		return dao;
+	}
+
+	private EntityTransaction getTx() {
+		return tx;
+	}
+
+	private EntityManager getEm() {
+		return em;
+	}
+}

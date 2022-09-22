@@ -1,0 +1,37 @@
+package services;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceContext;
+
+import dao.EnderecoDAO;
+import persistence.DataBaseConnection;
+
+public class EnderecoService {
+	//Attributes
+		@PersistenceContext(unitName = "apploja")
+		private final EntityManager em;
+		
+		private EnderecoDAO dao;
+		
+		private EntityTransaction tx;
+		
+		//Constructors
+		public EnderecoService() {
+			em = DataBaseConnection.getConnection().getEntityManager();
+			dao = new EnderecoDAO(em);
+		}
+		
+		//Methods
+		private EnderecoDAO getDao() {
+			return dao;
+		}
+
+		private EntityTransaction getTx() {
+			return tx;
+		}
+
+		private EntityManager getEm() {
+			return em;
+		}
+}

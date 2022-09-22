@@ -63,14 +63,24 @@ public class ClientDAO {
 	public EntityManager getEntityManager() {
 		return entityManager;
 	}
+	
 
-	public Page<Client> listaPaginada(int paginaAtual, int tamanhoPagina) {
+	public Page<Client> listaPaginada(Integer paginaAtual, Integer tamanhoPagina) {
 		
 		Page<Client> page = new Page<Client>();
 		
 		List<Client> listaCliente = new ArrayList<>();
 		
-		Integer total =count().intValue();
+		Long total =count();
+		
+		paginaAtual = ((paginaAtual-1)*tamanhoPagina);
+		
+		if(paginaAtual < 0) {
+			paginaAtual=0;
+		}
+		
+	
+		Double totalPaginas = Math.ceil(total.doubleValue()/tamanhoPagina.doubleValue());
 		
 		TypedQuery<Client> query = getEntityManager().createQuery("SELECT c from Client c",Client.class);
 		
@@ -79,8 +89,8 @@ public class ClientDAO {
 		page.setContent(listaCliente);
 		page.setPage(paginaAtual);
 		page.setPageSize(tamanhoPagina);
-		page.setTotalRecords(total);
-		page.setTotalPage(total/tamanhoPagina);
+		page.setTotalRecords(total.intValue());
+		page.setTotalPage(totalPaginas.intValue());
 		
 				
 		return page;

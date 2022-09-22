@@ -1,0 +1,9 @@
+package dao;
+
+public class ItemPedidoDAO {
+	private EntityManager em;
+	
+	public ItemPedidoDAO (EntityManager em){
+		this.em = em;
+	}
+}

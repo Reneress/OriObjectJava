@@ -1,0 +1,15 @@
+package models;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@SuppressWarnings("serial")
+@Entity
+@Table(name="pagamento")
+public class Pagamento  implements Serializable{
+	private Integer id;
+	private EstadoPagamento estado;
+	
+}

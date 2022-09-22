@@ -1,0 +1,11 @@
+package dao;
+
+import javax.persistence.EntityManager;
+
+public class CidadeDAO {
+	private EntityManager em;
+	
+	public CidadeDAO (EntityManager em) {
+		this.em = em;
+	}
+}
