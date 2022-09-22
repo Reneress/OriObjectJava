@@ -1,0 +1,62 @@
+package View.Crude;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+
+public class PagCartao extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4875991024217101385L;
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PagCartao frame = new PagCartao();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
+	public PagCartao() {
+		initComponents();
+		eventhandler();
+	}
+	
+	private void eventhandler() {
+		
+	}
+	private void initComponents() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 798, 476);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(211, 61, 48));
+		panel.setBounds(0, 0, 784, 101);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(0, 103, 784, 336);
+		contentPane.add(panel_1);
+	}
+}

@@ -1074,3 +1074,106 @@
 2022-09-22 14:53:57,258 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
 2022-09-22 14:53:57,259 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-09-22 14:53:57,260 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 18:41:29,548 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-09-22 19:04:40,619 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:04:40,621 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:04:40,624 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:04:40,624 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:05:13,499 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:05:13,500 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:05:13,501 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:05:13,502 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:05:58,462 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:05:58,462 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:05:58,465 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:05:58,466 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:06:43,930 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:06:43,930 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:06:43,932 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:06:43,933 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:07:32,942 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:07:32,942 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:07:32,944 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:07:32,945 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:10:12,254 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:10:12,254 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:10:12,256 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:10:12,257 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:14:51,992 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:14:51,992 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:14:52,000 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:14:52,001 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:15:36,405 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:15:36,406 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:15:36,409 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:15:36,410 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:16:44,808 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:16:44,809 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:16:44,810 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:16:44,810 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:17:00,351 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:17:00,351 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:17:00,353 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:17:00,354 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:17:08,602 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:17:08,602 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:17:08,604 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:17:08,604 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:17:32,356 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:17:32,356 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:17:32,358 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:17:32,359 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:18:30,162 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:18:30,162 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:18:30,165 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:18:30,167 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:21:26,289 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:21:26,290 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:21:26,291 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:21:26,292 [Worker-16: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:25:08,281 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:25:08,281 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:25:08,283 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:25:08,283 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:26:46,656 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:26:46,656 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:26:46,659 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:26:46,660 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:27:27,942 [Worker-17: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:27:27,942 [Worker-17: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:27:27,944 [Worker-17: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:27:27,944 [Worker-17: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:28:29,376 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:28:29,377 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:28:29,379 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:28:29,380 [Worker-20: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:30:57,080 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:30:57,080 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:30:57,082 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:30:57,082 [Worker-8: Launching PagCartao] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:31:26,788 [Worker-8: Launching TMain] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:31:26,788 [Worker-8: Launching TMain] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:31:26,790 [Worker-8: Launching TMain] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:31:26,790 [Worker-8: Launching TMain] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:32:26,623 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:32:26,623 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:32:26,625 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:32:26,626 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:32:45,953 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:32:45,953 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:32:45,954 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:32:45,955 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:35:09,089 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:35:09,089 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:35:09,091 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:35:09,091 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:35:17,343 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:35:17,343 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:35:17,345 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:35:17,345 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:35:33,821 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:35:33,821 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources
+2022-09-22 19:35:33,823 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:35:33,823 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\test\resources
+2022-09-22 19:37:10,075 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-22 19:37:10,076 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Leonardo\Downloads\Sistemas\projects\appLoja-main\workspace\loja\src\main\resources

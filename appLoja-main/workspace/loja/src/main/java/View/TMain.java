@@ -65,6 +65,7 @@ public class TMain extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1115, 530);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(86, 86, 86));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
