@@ -1,7 +1,7 @@
 package com.appvenda.view.cliente;
 
 import java.awt.Color;
-import java.awt.EventQueue;
+//import java.awt.EventQueue;
 import java.awt.Font;
 
 import javax.swing.JButton;
@@ -12,13 +12,16 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.TableColumn;
 
 import com.appvenda.config.Page;
 import com.appvenda.models.Client;
 import com.appvenda.services.ClientService;
+import com.appvenda.view.table.RenderHeaderTable;
 import com.appvenda.view.table.RenderTable;
 import com.appvenda.view.table.TabelaClienteModel;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 import java.awt.event.ActionEvent;
 
 public class TabelaCliente extends JFrame {
@@ -46,9 +49,13 @@ public class TabelaCliente extends JFrame {
 	
 	private int linha = 0;
 	private int coluna = 0;
-	private int tamanhoPagina =30;
+	private int tamanhoPagina =15;
 	private int paginaAtual =0;
+	//private JtextFiled nomePesquisa;
 	
+	
+	private static TabelaCliente TABELA_CLIENTE;
+	/*
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -65,10 +72,17 @@ public class TabelaCliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TabelaCliente() {
+	private TabelaCliente() {
 		iniComponents();
 		eventHandler();
 		iniciarTabela();
+	}
+	
+	public static TabelaCliente getInstancia() {
+			if(Objects.isNull(TABELA_CLIENTE)) {
+				TABELA_CLIENTE = new TabelaCliente(); 
+			}
+			return TABELA_CLIENTE;
 	}
 	
 	private void eventHandler() {
@@ -106,18 +120,22 @@ public class TabelaCliente extends JFrame {
 		});
 		btnIncluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		btnAlterar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				getLinhaTabela();
 			}
 		});
 		btnExcluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				getLinhaTabela();
 			}
 		});
 		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				getLinhaTabela();
 			}
 		});
 		btnPesquisa.addActionListener(new ActionListener() {
@@ -138,13 +156,31 @@ public class TabelaCliente extends JFrame {
 		
 		tabelaCliente.setModel(model);
 		
+		RenderHeaderTable renderHeader = new RenderHeaderTable();
+		
+		tabelaCliente.getTableHeader().setDefaultRenderer(renderHeader);
+		
 		RenderTable render = new RenderTable();
 		
 		for(int coluna =0;coluna < model.getColumnCount();coluna ++) {
 			tabelaCliente.setDefaultRenderer(model.getColumnClass(coluna), render);
 		}
 		
+		for(int col = 0;col < model.getColumnCount();col++) {
+			TableColumn coluna = tabelaCliente.getColumnModel().getColumn(col);
+			coluna.setMinWidth(100);
+			coluna.setMaxWidth(100);
+			coluna.setPreferredWidth(100);
+		}
 	}	
+	
+	private void getLinhaTabela() {
+		
+		linha = tabelaCliente.getSelectedRow();
+		coluna = tabelaCliente.getSelectedColumn();
+		//Client cliente = model.getCliente(linha);
+		
+	}
 	
 	private void listarCliente() {
 		clienteService = new ClientService();
@@ -178,7 +214,7 @@ public class TabelaCliente extends JFrame {
 	
 	private void iniComponents() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 801, 603);
+		setBounds(100, 100, 877, 603);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(219, 181, 66));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -187,13 +223,13 @@ public class TabelaCliente extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panelTabela = new JPanel();
-		panelTabela.setBounds(10, 144, 767, 295);
-		panelTabela.setBackground(new Color(81, 184, 31));
+		panelTabela.setBounds(10, 144, 843, 295);
+		panelTabela.setBackground(new Color(0, 128, 0));
 		contentPane.add(panelTabela);
 		panelTabela.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 10, 747, 275);
+		scrollPane.setBounds(10, 10, 823, 275);
 		panelTabela.add(scrollPane);
 		
 		JScrollPane scrollPaneCliente = new JScrollPane();
@@ -204,19 +240,19 @@ public class TabelaCliente extends JFrame {
 		scrollPaneCliente.setViewportView(tabelaCliente);
 		
 		JPanel panelPesquisa = new JPanel();
-		panelPesquisa.setBounds(10, 10, 767, 128);
-		panelPesquisa.setBackground(new Color(46, 155, 30));
+		panelPesquisa.setBounds(10, 10, 843, 128);
+		panelPesquisa.setBackground(new Color(0, 128, 0));
 		contentPane.add(panelPesquisa);
 		panelPesquisa.setLayout(null);
 		
 		JLabel labelPesquisa = new JLabel("Nome:");
 		labelPesquisa.setFont(new Font("Verdana", Font.ITALIC, 20));
-		labelPesquisa.setBounds(10, 32, 73, 26);
+		labelPesquisa.setBounds(10, 37, 73, 26);
 		panelPesquisa.add(labelPesquisa);
 		
 		textNomePesquisa = new JTextField();
 		textNomePesquisa.setFont(new Font("Verdana", Font.ITALIC, 20));
-		textNomePesquisa.setBounds(93, 33, 498, 26);
+		textNomePesquisa.setBounds(93, 33, 574, 34);
 		panelPesquisa.add(textNomePesquisa);
 		textNomePesquisa.setColumns(10);
 		
@@ -224,61 +260,61 @@ public class TabelaCliente extends JFrame {
 		
 		btnPesquisa.setBackground(Color.WHITE);
 		btnPesquisa.setFont(new Font("Verdana", Font.ITALIC, 20));
-		btnPesquisa.setBounds(601, 32, 156, 26);
+		btnPesquisa.setBounds(677, 32, 156, 35);
 		panelPesquisa.add(btnPesquisa);
 		
 		
 		
-		btnIncluir.setBounds(24, 521, 115, 35);
+		btnIncluir.setBounds(10, 521, 115, 35);
 		btnIncluir.setBackground(new Color(240, 240, 240));
 		btnIncluir.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(btnIncluir);
 		
 		
 		
-		btnAlterar.setBounds(168, 521, 115, 35);
+		btnAlterar.setBounds(231, 521, 115, 35);
 		btnAlterar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(btnAlterar);
 		
 		
 		
-		btnExcluir.setBounds(310, 521, 115, 35);
+		btnExcluir.setBounds(463, 521, 115, 35);
 		btnExcluir.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(btnExcluir);
 		
 		
 		
-		btnConsultar.setBounds(459, 521, 157, 35);
+		btnConsultar.setBounds(696, 521, 157, 35);
 		btnConsultar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(btnConsultar);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(10, 449, 767, 50);
+		panel.setBounds(10, 449, 843, 50);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		
 	
 		btnPrimeiro.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 15));
-		btnPrimeiro.setBounds(29, 10, 113, 21);
+		btnPrimeiro.setBounds(10, 19, 113, 21);
 		panel.add(btnPrimeiro);
 		
 		
 		
 		btnAnterior.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 15));
-		btnAnterior.setBounds(251, 10, 105, 21);
+		btnAnterior.setBounds(221, 19, 105, 21);
 		panel.add(btnAnterior);
 		
 		
 		
 		btnProximo.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 15));
-		btnProximo.setBounds(429, 10, 105, 21);
+		btnProximo.setBounds(462, 19, 105, 21);
 		panel.add(btnProximo);
 		
 		
 		
 		btnUltimo.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 15));
-		btnUltimo.setBounds(616, 10, 105, 21);
+		btnUltimo.setBounds(728, 19, 105, 21);
 		panel.add(btnUltimo);
 	}
 

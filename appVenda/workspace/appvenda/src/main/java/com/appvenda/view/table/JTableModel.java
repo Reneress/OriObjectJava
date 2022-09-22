@@ -40,6 +40,14 @@ public abstract class JTableModel<T> extends AbstractTableModel{
 		return null;
 	}
 	
+	@Override
+	public String getColumnName(int col) {
+		if(col < getColumnCount()) {
+			return coluna[col];
+		}
+		return super.getColumnName(col);
+	}
+	
 	public T getValueAt(int linha) {
 		
 		return tabela.get(linha);

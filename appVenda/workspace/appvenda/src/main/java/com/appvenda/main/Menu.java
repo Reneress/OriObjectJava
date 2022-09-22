@@ -1,0 +1,13 @@
+package com.appvenda.main;
+
+import com.appvenda.view.cliente.TabelaCliente;
+
+public class Menu {
+
+	public static void main(String[] args) {
+		
+		TabelaCliente tabelaCliente = TabelaCliente.getInstancia();
+		tabelaCliente.setVisible(true);
+	}
+
+}

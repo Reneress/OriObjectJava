@@ -9,7 +9,7 @@ public class TabelaClienteModel extends JTableModel<Client>{
 
 	private static final long serialVersionUID = -5288345439338876506L;
 
-	private final String coluna[] = {"Id","Nome","Endereco","Bairro","Cep","Email","Telefone","Idade"};
+	private final String colunaCliente[] = {"Id","Nome","Endereco","Bairro","Cep","Email","Telefone","Idade"};
 	
 	private final Integer tamanhoCampo[] = {};
 	
@@ -17,13 +17,13 @@ public class TabelaClienteModel extends JTableModel<Client>{
 	
 	public TabelaClienteModel() {
 		tabela= new ArrayList<Client>();
-		setColuna(coluna);
+		this.coluna = colunaCliente;
 	}
 	
 	public TabelaClienteModel(List<Client> tabela) {
 		super(tabela);
 		this.tabela = tabela;
-		setColuna(coluna);
+		this.coluna = colunaCliente;
 	}
 	
 	@Override

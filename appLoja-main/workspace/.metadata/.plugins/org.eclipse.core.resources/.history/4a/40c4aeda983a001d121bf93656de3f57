@@ -1,0 +1,68 @@
+package View;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JToolBar;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
+public class Main extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main frame = new Main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Main() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1115, 530);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel topBar = new JPanel();
+		topBar.setBackground(new Color(245, 41, 5));
+		topBar.setBounds(0, 0, 1101, 119);
+		contentPane.add(topBar);
+		topBar.setLayout(null);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(10, 0, 101, 22);
+		topBar.add(menuBar);
+		
+		JMenu mn_cadastro = new JMenu("New menu");
+		menuBar.add(mn_cadastro);
+		
+		JMenuItem Pagamento = new JMenuItem("New menu item");
+		mn_cadastro.add(Pagamento);
+		
+		JPanel botBar = new JPanel();
+		botBar.setBackground(new Color(245, 41, 5));
+		botBar.setBounds(0, 467, 1101, 26);
+		contentPane.add(botBar);
+		botBar.setLayout(null);
+	}
+}
