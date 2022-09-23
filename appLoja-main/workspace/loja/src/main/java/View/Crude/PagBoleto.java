@@ -13,6 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import services.PagamentoBoletoService;
+
 public class PagBoleto extends JFrame {
 
 	/**
@@ -27,6 +29,9 @@ public class PagBoleto extends JFrame {
 	private JTextField txtEstado;
 	private JTextField txtDataVencimento;
 	private JTextField txtDataPagamento;
+	
+	private Long idPagBoleto = 0;
+	private PagamentoBoletoService 
 
 	/**
 	 * Launch the application.
