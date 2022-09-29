@@ -7,6 +7,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -14,6 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.TableColumn;
 
+import com.appvenda.config.Constantes;
 import com.appvenda.config.Page;
 import com.appvenda.models.Client;
 import com.appvenda.services.ClientService;
@@ -46,6 +48,7 @@ public class TabelaCliente extends JFrame {
 	private TabelaClienteModel model;
 	private Page <Client> page;
 	private ClientService clienteService;
+	private Client cliente;
 	
 	private int linha = 0;
 	private int coluna = 0;
@@ -86,6 +89,7 @@ public class TabelaCliente extends JFrame {
 	}
 	
 	private void eventHandler() {
+		
 		btnPrimeiro.setBackground(new Color(46, 155, 30));
 		btnPrimeiro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -120,22 +124,30 @@ public class TabelaCliente extends JFrame {
 		});
 		btnIncluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				showClienteFrame(Constantes.Incluir);
+				iniciarTabela();
 			}
+
 		});
 		btnAlterar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				getLinhaTabela();
+				showClienteFrame(Constantes.Alterar);
+				iniciarTabela();
 			}
 		});
 		btnExcluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				getLinhaTabela();
+				showClienteFrame(Constantes.Excluir);
+				iniciarTabela();
 			}
 		});
 		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				getLinhaTabela();
+				showClienteFrame(Constantes.Consultar);
+				iniciarTabela();
 			}
 		});
 		btnPesquisa.addActionListener(new ActionListener() {
@@ -176,9 +188,18 @@ public class TabelaCliente extends JFrame {
 	
 	private void getLinhaTabela() {
 		
-		linha = tabelaCliente.getSelectedRow();
-		coluna = tabelaCliente.getSelectedColumn();
-		//Client cliente = model.getCliente(linha);
+		cliente = getCliente();
+		
+		if(tabelaCliente.getSelectedRow() != -1) {
+			linha = tabelaCliente.getSelectedRow();
+			coluna = tabelaCliente.getSelectedColumn();
+			cliente = model.getCliente(linha);
+			
+		}else {
+			JOptionPane.showMessageDialog(null, "Selecione uma Linha na tabela","[ERRO]",JOptionPane.ERROR_MESSAGE);
+		}
+		
+		
 		
 	}
 	
@@ -211,6 +232,11 @@ public class TabelaCliente extends JFrame {
 		tamanhoPagina = page.getPageSize();
 	}
 	
+	private void showClienteFrame(Integer opcaoCadastro) {
+		ClientesView view = new ClientesView(cliente,opcaoCadastro);
+		view.setLocationRelativeTo(null);
+		view.setVisible(true);
+	}
 	
 	private void iniComponents() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -333,5 +359,11 @@ public class TabelaCliente extends JFrame {
 	public void setColuna(int coluna) {
 		this.coluna = coluna;
 	}
+
+	public Client getCliente() {
+		return new Client();
+	}
+
+	
 	
 }

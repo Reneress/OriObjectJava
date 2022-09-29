@@ -1,13 +1,16 @@
 package com.appvenda.models;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +29,9 @@ public class Client implements Serializable{
 	private String email;
 	private String telefone;
 	private Integer idade;
+	
+	
+	private List<Pedidos> listaPedidos;
 	
 	public Client() {
 		super();
@@ -131,6 +137,16 @@ public class Client implements Serializable{
 		return "Client [id=" + id + ", name=" + name + ", Address=" + Address + ", district=" + district + ", cep="
 				+ cep + ", email=" + email + ", telefone=" + telefone + ", idade=" + idade + "]";
 	}
+
+	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
+	public List<Pedidos> getListaPedidos() {
+		return listaPedidos;
+	}
+
+	public void setListaPedidos(List<Pedidos> listaPedidos) {
+		this.listaPedidos = listaPedidos;
+	}
+	
 	
 	
 	

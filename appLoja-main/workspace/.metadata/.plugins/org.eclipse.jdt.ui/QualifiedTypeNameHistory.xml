@@ -8,4 +8,6 @@
     <fullyQualifiedTypeName name="models.Telefone"/>
     <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="services.PagamentoBoletoService"/>
+    <fullyQualifiedTypeName name="models.PagamentoComBoleto"/>
 </qualifiedTypeNameHistroy>

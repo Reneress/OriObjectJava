@@ -1,12 +1,17 @@
 package com.appvenda.models;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -27,6 +32,8 @@ public class User implements Serializable{
 	private String password;
 	private String confirm;
 	private boolean active = Boolean.FALSE;
+	
+	private List<Perfil> listaPerfis;
 	
 	//Constructors
 	
@@ -127,6 +134,18 @@ public class User implements Serializable{
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", email=" + email + ", password=" + password
 				+ ", confirm=" + confirm + ", active=" + active + "]";
+	}
+
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "TAB_USER_PERFIL",
+	joinColumns = @JoinColumn(name = "USUARIO_ID"), 
+	inverseJoinColumns = @JoinColumn(name ="PERFIL_ID"))
+	public List<Perfil> getListaPerfis() {
+		return listaPerfis;
+	}
+
+	public void setListaPerfis(List<Perfil> listaPerfis) {
+		this.listaPerfis = listaPerfis;
 	}
 	
 	

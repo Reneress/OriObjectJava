@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import models.PagamentoComBoleto;
 import services.PagamentoBoletoService;
 
 public class PagBoleto extends JFrame {
@@ -30,9 +31,10 @@ public class PagBoleto extends JFrame {
 	private JTextField txtDataVencimento;
 	private JTextField txtDataPagamento;
 	
-	private Long idPagBoleto = 0;
-	private PagamentoBoletoService 
+	private Long idPagBoleto = 0l;
+	private PagamentoBoletoService pagamentoBoletoService;
 
+	private PagamentoComBoleto pagamentoBoleto;
 	/**
 	 * Launch the application.
 	 */
@@ -64,6 +66,11 @@ public class PagBoleto extends JFrame {
 		
 			btnSalvar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					if(idPagBoleto == 0l) {
+						
+					}else {
+						
+					}
 				}
 			});
 			
@@ -81,6 +88,19 @@ public class PagBoleto extends JFrame {
 				}
 			});
 		}
+		
+		public void salvarPagBoleto() {
+			pagamentoBoletoService = getPagBoletoService();
+			pagamentoBoleto = getPagBoleto();
+			
+			
+			
+		}
+		
+		private void setPagBoletoview() {
+			pagamentoBoleto.setEstado(txtEstado.getText());
+		}
+		
 		private void initComponents() {
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			setBounds(100, 100, 798, 476);
@@ -178,6 +198,14 @@ public class PagBoleto extends JFrame {
 			txtDataPagamento.setColumns(10);
 			txtDataPagamento.setBounds(159, 88, 374, 19);
 			panel_1.add(txtDataPagamento);
+		}
+		
+		public PagamentoBoletoService getPagBoletoService() {
+			return new PagamentoBoletoService();
+		}
+		
+		public PagamentoComBoleto getPagBoleto() {
+			return new PagamentoComBoleto();
 		}
 	
 

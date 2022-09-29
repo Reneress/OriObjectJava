@@ -1,7 +1,7 @@
 package com.appvenda.view.cliente;
 
 //import java.awt.BorderLayout;
-import java.awt.EventQueue;
+//import java.awt.EventQueue;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import com.appvenda.config.Constantes;
 import com.appvenda.models.Client;
 import com.appvenda.services.ClientService;
 import java.awt.SystemColor;
@@ -50,7 +51,7 @@ public class ClientesView extends JFrame {
 
 	/**
 	 * Launch the application.
-	 */
+	 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -64,15 +65,52 @@ public class ClientesView extends JFrame {
 		});
 	}
 
-	/**
+	
 	 * Create the frame.
 	 */
-	public ClientesView() {
+	public ClientesView(Client cliente, Integer opcaoCadastro) {
 		
 		initComponentes();
 		EventHandler();
 		
-		consultaClient();
+		if(opcaoCadastro == Constantes.Incluir){
+			
+			
+			btnSalvar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+			btnSalvar.setBounds(62, 26, 136, 31);
+			btnCancelar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+			btnCancelar.setBounds(552, 26, 136, 31);
+			
+		}
+		
+		if(opcaoCadastro.equals(Constantes.Alterar)) {
+			consultaClient(cliente.getId());
+			
+			btnSalvar.setText("Alterar");
+			
+			btnSalvar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+			btnSalvar.setBounds(62, 26, 136, 31);
+			btnCancelar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+			btnCancelar.setBounds(552, 26, 136, 31);
+			
+		}else if(opcaoCadastro.equals(Constantes.Excluir)){
+			consultaClient(cliente.getId());
+			
+			btnSalvar.setText("Excluir");
+			
+			btnSalvar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+			btnSalvar.setBounds(62, 26, 136, 31);
+			btnSalvar.setText("Excluir");
+			btnCancelar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+			btnCancelar.setBounds(552, 26, 136, 31);
+			
+		}else if(opcaoCadastro.equals(Constantes.Consultar)){
+			consultaClient(cliente.getId());
+			
+			btnCancelar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
+			btnCancelar.setBounds(552, 26, 136, 31);
+		}
+		
 	}
 	
 	private void EventHandler() {
@@ -133,14 +171,20 @@ public class ClientesView extends JFrame {
 		limpa();
 	}
 	
-	public void consultaClient() {
+	public void consultaClient(Long id) {
 		
 		clienteService = getClienteService();
 		cliente = getCliente();
-		
-		Long id = 2L;
 		cliente = clienteService.consultaClienteId(id);
 		
+		getClienteFromDatabase();
+		
+		
+		
+		//System.out.println(cliente.toString());
+	}
+	
+	private void getClienteFromDatabase() {
 		idCliente = cliente.getId();
 		txtNome.setText(cliente.getName());
 		txtEndereco.setText(cliente.getAddress());
@@ -149,8 +193,6 @@ public class ClientesView extends JFrame {
 		txtEmail.setText(cliente.getEmail());
 		txtTelefone.setText(cliente.getTelefone());
 		txtIdade.setText(String.valueOf(cliente.getIdade()));
-		
-		//System.out.println(cliente.toString());
 	}
 	
 	public void listarClient() {
@@ -198,6 +240,7 @@ public class ClientesView extends JFrame {
 	
 	
 	private void initComponentes() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
@@ -310,13 +353,14 @@ public class ClientesView extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		btnSalvar = new JButton("Salvar");
+		btnSalvar = new JButton();
 		btnSalvar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				
 			}
 		});
+		
 		btnSalvar.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 20));
 		btnSalvar.setBounds(62, 26, 136, 31);
 		panel_1.add(btnSalvar);
@@ -330,6 +374,8 @@ public class ClientesView extends JFrame {
 		//excluirClient():
 		//consultaClient();
 		//listarClient();
+		
+		
 	}
 	
 	
